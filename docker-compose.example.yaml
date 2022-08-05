@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  q-clipboard-server:
+    image: patrickwangqy/q-clipboard-server
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+    ports:
+      - "5000:5000"
