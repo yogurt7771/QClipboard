@@ -1,4 +1,5 @@
 # q-clipboard-server
+
 Q Clipboard Server是一个跨平台的剪切板同步方案。
 
 使用之前你需要一个服务器来部署服务。
@@ -26,8 +27,7 @@ services:
 
 1. 安装.net 6.0
 
-    https://dotnet.microsoft.com/en-us/download/dotnet/6.0
-
+   https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 2. 执行编译命令
 
 ```powershell
@@ -58,14 +58,17 @@ TODO：更新教程
 
 iOS端使用快捷指令
 
-TODO：更新教程
+[获取剪切板](https://www.icloud.com/shortcuts/a8dc7996c8be447a9f362cd81ac43c41)
+
+[推送剪切板](https://www.icloud.com/shortcuts/dc8dc27d7eef462ab1e59b994bf28b5d)
+
+[推送图像](https://www.icloud.com/shortcuts/d19828cd16434b97b07fd664a1b2f60a)
+
+[推送文件](https://www.icloud.com/shortcuts/e1f5bec859ae4764a1ed19999f9e483b)
 
 ## 功能列表
 
-[x] 文本推送、拉取
-
-[x] 图像推送、拉取
-
-[x] 文件推送、拉取
-
-[] 剪切板历史
+* [X] 文本推送、拉取
+* [X] 图像推送、拉取
+* [X] 文件推送、拉取
+* [ ] 剪切板历史
