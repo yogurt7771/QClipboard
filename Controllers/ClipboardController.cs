@@ -78,6 +78,9 @@ public class ClipboardController : ControllerBase
             return new FileStreamResult(new MemoryStream(data), "image/png");
         }
         else if (clipboard.Type == "file") {
+            if (!System.IO.File.Exists(clipboard.Content)) {
+                return NotFound();
+            }
             var result = new PhysicalFileResult(clipboard.Content, "application/octet-stream");
             Response.Headers.Append("Content-Disposition", $"attachment; filename={System.IO.Path.GetFileName(clipboard.Content)}");
             return result;

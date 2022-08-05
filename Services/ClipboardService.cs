@@ -27,10 +27,6 @@ public static class ClipboardService
                     if (System.IO.File.Exists(oldClipboard.Content)) {
                         System.IO.File.Delete(oldClipboard.Content);
                     }
-                    var tempDir = Path.GetDirectoryName(oldClipboard.Content);
-                    if (!string.IsNullOrEmpty(tempDir) && System.IO.Directory.Exists(tempDir)) {
-                        System.IO.Directory.Delete(tempDir);
-                    }
                 }
             }
         }

@@ -52,7 +52,19 @@ windows端使用powershell脚本来实现剪切板同步
 
 Android端使用[http-shortcuts](https://http-shortcuts.rmy.ch/)
 
-TODO：更新教程
+1. 增加4个变量
+
+    QClipboardUrl：类型常量，值为服务端地址，例如http://192.168.1.1/Clipboard
+
+    QClipboardUser：类型常量，值为用户名
+
+    QClipboardToken：类型常量，token值要与服务端配置一致
+
+    QClipboardText：类型为剪切板内容
+
+2. 导入配置
+
+    [配置](Clients/Android/shortcuts.json)
 
 ### iOS
 

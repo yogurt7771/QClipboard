@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "id": "9b0db1bd-87b8-456b-a741-001b0cbe2282",
+      "name": "Q-Clipboard",
+      "shortcuts": [
+        {
+          "codeOnSuccess": "const t \u003d JSON.parse(response.body).type;\n\nif (t \u003d\u003d \u0027text\u0027) {\n  const c \u003d JSON.parse(response.body).content;\n  copyToClipboard(c);\n  showToast(\"Copied: \" + c);\n} else if (t \u003d\u003d \u0027image\u0027) {\n  openUrl(getVariable(/*[variable]*/\"7ca1b2a4-2138-40a4-baea-2fb181f023ca\"/*[/variable]*/)+JSON.parse(response.body).url);\nshowToast(\"Downloading image\");\n} else if (t \u003d\u003d \u0027file\u0027) {\n  openUrl(getVariable(/*[variable]*/\"7ca1b2a4-2138-40a4-baea-2fb181f023ca\"/*[/variable]*/)+JSON.parse(response.body).url);\nshowToast(\"Downloading file\");\n} else {\n  showToast(`Unsupported type: ${t}`);\n}",
+          "headers": [
+            {
+              "id": "d80b04a0-57fb-4138-a61c-b7dbdc38e13e",
+              "key": "Token",
+              "value": "{{61920945-6149-4717-bd17-1453f2f7d408}}"
+            }
+          ],
+          "iconName": "flat_color_arrow_down",
+          "id": "e22d52f5-42d5-4f9f-a0f6-5e93785cb8a3",
+          "name": "Pull Clipboard",
+          "responseHandling": {
+            "successOutput": "none",
+            "uiType": "toast"
+          },
+          "url": "{{7ca1b2a4-2138-40a4-baea-2fb181f023ca}}/{{95410e73-ab8d-4c81-ba8e-1ddae12dc624}}"
+        },
+        {
+          "bodyContent": "{\"type\":\"text\",\"content\":\"{{d0882cfe-fd38-4bf9-be26-310f4ccd173c}}\"}",
+          "codeOnSuccess": "showToast(\"Pushed: \" + getVariable(/*[variable]*/\"d0882cfe-fd38-4bf9-be26-310f4ccd173c\"/*[/variable]*/));",
+          "contentType": "application/json",
+          "headers": [
+            {
+              "id": "d8d92eb2-e51f-45d3-a086-9877071f02b1",
+              "key": "Token",
+              "value": "{{61920945-6149-4717-bd17-1453f2f7d408}}"
+            }
+          ],
+          "iconName": "flat_color_arrow_up",
+          "id": "98046f8a-3102-44ec-bb32-52d6d88a7908",
+          "method": "POST",
+          "name": "Push Clipboard",
+          "responseHandling": {
+            "successOutput": "none"
+          },
+          "url": "{{7ca1b2a4-2138-40a4-baea-2fb181f023ca}}/{{95410e73-ab8d-4c81-ba8e-1ddae12dc624}}"
+        },
+        {
+          "bodyContent": "{\"type\":\"text\",\"content\":\"{{8b843154-1e4a-4f18-b3b9-096546ad305c}}\"}",
+          "codeOnSuccess": "showToast(\"File pushed：\" + selectedFiles[0].name);",
+          "contentType": "application/json",
+          "headers": [
+            {
+              "id": "a7674ced-8ea3-4f66-a00b-4d0a435e02c6",
+              "key": "Token",
+              "value": "{{61920945-6149-4717-bd17-1453f2f7d408}}"
+            }
+          ],
+          "iconName": "flat_color_folder",
+          "id": "bd42d701-0021-4152-be1d-5043244196f1",
+          "method": "POST",
+          "name": "Push File",
+          "parameters": [
+            {
+              "id": "e316c93d-2a20-408c-84e0-f7350745f3a3",
+              "key": "File",
+              "type": "file"
+            },
+            {
+              "id": "7d5b5e3f-e872-445a-ba9d-0d07c302462a",
+              "key": "Type",
+              "value": "file"
+            }
+          ],
+          "requestBodyType": "form_data",
+          "responseHandling": {
+            "successOutput": "none"
+          },
+          "url": "{{7ca1b2a4-2138-40a4-baea-2fb181f023ca}}/{{95410e73-ab8d-4c81-ba8e-1ddae12dc624}}/upload"
+        },
+        {
+          "bodyContent": "{\"type\":\"text\",\"content\":\"{{8b843154-1e4a-4f18-b3b9-096546ad305c}}\"}",
+          "codeOnSuccess": "showToast(\"Image pushed：\" + selectedFiles[0].name);",
+          "contentType": "application/json",
+          "headers": [
+            {
+              "id": "42c212b6-d603-4a8d-bb6d-79f8825cdbd0",
+              "key": "Token",
+              "value": "{{61920945-6149-4717-bd17-1453f2f7d408}}"
+            }
+          ],
+          "iconName": "flat_color_image",
+          "id": "0aa73fc3-b1dc-4871-b22b-2a60d22b68cd",
+          "method": "POST",
+          "name": "Push Image",
+          "parameters": [
+            {
+              "id": "5a1f827c-ba6f-4397-bc96-124b4fc3b97e",
+              "key": "File",
+              "type": "file"
+            },
+            {
+              "id": "657b9871-380d-4324-970a-3e486bbfac8d",
+              "key": "Type",
+              "value": "image"
+            }
+          ],
+          "requestBodyType": "form_data",
+          "responseHandling": {
+            "successOutput": "none"
+          },
+          "url": "{{7ca1b2a4-2138-40a4-baea-2fb181f023ca}}/{{95410e73-ab8d-4c81-ba8e-1ddae12dc624}}/upload"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "7ca1b2a4-2138-40a4-baea-2fb181f023ca",
+      "key": "QClipboardUrl",
+      "value": "https://qclip.qyqq.wang:8443/Clipboard"
+    },
+    {
+      "id": "61920945-6149-4717-bd17-1453f2f7d408",
+      "key": "QClipboardToken",
+      "value": "123464321"
+    },
+    {
+      "id": "95410e73-ab8d-4c81-ba8e-1ddae12dc624",
+      "key": "QClipboardUser",
+      "value": "wqy"
+    },
+    {
+      "id": "d0882cfe-fd38-4bf9-be26-310f4ccd173c",
+      "jsonEncode": true,
+      "key": "QClipboardText",
+      "type": "clipboard"
+    }
+  ],
+  "version": 52
+}
