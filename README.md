@@ -31,7 +31,7 @@ services:
 2. 执行编译命令
 
 ```powershell
-dotnet build -c Release
+dotnet publish -c Release
 ```
 
 程序会生成在bin/Release/net6.0
