@@ -69,6 +69,9 @@ Android端使用[http-shortcuts](https://http-shortcuts.rmy.ch/)
     QClipboardToken：类型常量，token值要与服务端配置一致
 
     QClipboardText：类型为剪切板内容
+    
+    ![Snipaste_2022-08-06_12-11-44](https://user-images.githubusercontent.com/22412010/183233123-aec87d65-ae5b-43f2-a571-80af52f7fe31.png)
+
 
 2. 导入配置
 
