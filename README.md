@@ -48,6 +48,14 @@ windows端使用powershell脚本来实现剪切板同步
 
 [Windows客户端](Clients/Windows/q-clipboard-pc)
 
+快捷键可以通过建立开始菜单的快捷方式来设置
+
+开始菜单的路径为
+
+> C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+
+![image](https://user-images.githubusercontent.com/22412010/183232722-b4b911fe-984f-4d86-9ed3-20490bc4ab9b.png)
+
 ### Android
 
 Android端使用[http-shortcuts](https://http-shortcuts.rmy.ch/)
