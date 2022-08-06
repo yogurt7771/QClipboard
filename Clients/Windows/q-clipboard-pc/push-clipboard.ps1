@@ -57,6 +57,7 @@ function PushClipboardFile()
         return
     }
     Write-Output "No file found (Cannot upload folder)"
+    Pause
 }
 
 function PushClipboard()
