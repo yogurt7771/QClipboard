@@ -82,7 +82,8 @@ public class ClipboardController : ControllerBase
                 return NotFound();
             }
             var result = new PhysicalFileResult(clipboard.Content, "application/octet-stream");
-            Response.Headers.Append("Content-Disposition", $"attachment; filename={System.IO.Path.GetFileName(clipboard.Content)}");
+            
+            Response.Headers.Append("Content-Disposition", $"attachment; filename={System.Web.HttpUtility.UrlEncode(System.IO.Path.GetFileName(clipboard.Content))}");
             return result;
         }
         else {

@@ -6,7 +6,7 @@ function PushClipboardText()
     $content = [System.Windows.Forms.Clipboard]::GetText()
     $data = @{type="text"; content=$content}
     $data_json = ConvertTo-Json -InputObject $data -Compress
-    $response = Invoke-WebRequest -Uri "$($config.url)/$($config.user)" -Headers @{Token=$config.token} -Body $data_json -ContentType 'application/json' -Method POST
+    $response = Invoke-WebRequest -Uri "$($config.url)/$($config.user)" -Headers @{Token=$config.token} -Body $data_json -ContentType 'application/json; charset=utf-8' -Method POST
     if ($response.StatusCode -Eq 200) {
         Write-Output "Pushed: '$content'"
     } else {
