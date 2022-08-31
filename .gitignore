@@ -348,3 +348,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+.vscode/
+/config/config.yaml
+/Clients/Windows/q-clipboard-pc/config.json
+/build-docker.bat
+/build-docker.ps1
+/docker-compose.yaml
+/Dockerfile
